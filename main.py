@@ -1,0 +1,12 @@
+def on_forever():
+    maqueen.motor_run(maqueen.Motors.ALL, maqueen.Dir.CW, 254 + 1)
+    basic.pause(6700)
+    maqueen.motor_run(maqueen.Motors.M2, maqueen.Dir.CW, 78)
+    basic.pause(6700)
+    maqueen.motor_run(maqueen.Motors.ALL, maqueen.Dir.CW, 255)
+    basic.pause(6700)
+    maqueen.motor_run(maqueen.Motors.M1, maqueen.Dir.CW, 789)
+    basic.pause(6700)
+    maqueen.motor_run(maqueen.Motors.ALL, maqueen.Dir.CW, 0)
+    maqueen.motor_run(maqueen.Motors.M2, maqueen.Dir.CW, 78)
+basic.forever(on_forever)
